@@ -27,8 +27,7 @@ pipeline {
                     usernameVariable: 'DOCKER_USERNAME'
                 )]) {
                     script {
-                        bat 
-                        """
+                        bat """
                             echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin
                             docker push %IMAGE%:latest
                         """ 
