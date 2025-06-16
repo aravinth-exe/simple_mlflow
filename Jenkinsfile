@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE: "aravinthexe/simple_mlflow"
+        IMAGE= "aravinthexe/simple_mlflow"
     }
 
     stages {
