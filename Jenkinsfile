@@ -8,8 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    bat
-                    "git pull origin main"
+                    bat "git pull origin main"
                 }
             }
         }
@@ -17,8 +16,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 script {
-                    bat 
-                    "docker build -t %IMAGE%:latest  --no-cache ."
+                    bat "docker build -t %IMAGE%:latest  --no-cache ."
                 }
             }
         }
