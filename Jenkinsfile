@@ -7,9 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    bat "git pull origin main"
-                }
+                bat "git pull origin main"
             }
         }
 
